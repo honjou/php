@@ -12,10 +12,12 @@
 // mysqliクラスのオブジェクトを作成
 if($_SERVER['HTTP_HOST']=='localhost'){
     // ローカル環境
+    // 引数は各自の環境にあわせて入れてください
     $mysqli = new mysqli('localhost', 'root', '', 'practice_db');
 }else{
     // 本番環境
-    $mysqli = new mysqli('mysql628.db.sakura.ne.jp', 'laraweb', 'g36xzbrbmy', 'laraweb_practice');
+    // 引数は各自の環境にあわせて入れてください
+    $mysqli = new mysqli('host', 'username', 'passwd', 'dbname');
 }
 
 if($mysqli->connect_errno) {
